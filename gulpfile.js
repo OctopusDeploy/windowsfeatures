@@ -12,12 +12,12 @@ var outputFolder = isDist ? 'dist' : 'build';
 
 var globs = {
     sass: 'src/style/**/*.scss',
-    templates: 'src/templates/**/*.html',
+    templates: 'src/views/**/*.jade',
     assets: 'src/assets/**/*.*',
     app: 'src/app/**/*.ts',
     appWithDefinitions: 'src/**/*.ts',
     integration: 'src/tests/integration/**/*.js',
-    index: 'src/index.html'
+    index: 'src/index.jade'
 };
 
 var destinations = {
@@ -53,12 +53,15 @@ var karma = require('gulp-karma')({
     configFile: 'karma.conf.js'
 });
 
+var gitshasuffix = require('gulp-gitshasuffix');
+
 // TASKS ===========================================================
 
 gulp.task('sass', function () {
     return gulp.src(globs.sass)
         .pipe(plugins.sass({style: 'compressed', errLogToConsole: true}))
         .pipe(plugins.autoprefixer())  // defauls to > 1%, last 2 versions, Firefox ESR, Opera 12.1
+        .pipe(gitshasuffix())
         .pipe(gulp.dest(destinations.css));
 });
 
@@ -81,20 +84,23 @@ gulp.task('ts-compile', function () {
         .pipe(plugins.ngAnnotate())
         .pipe(isDist ? plugins.uglify() : plugins.util.noop())
         .pipe(plugins.wrap({ src: './iife.txt'}))
+        .pipe(gitshasuffix())
         .pipe(gulp.dest(destinations.js));
 });
 
 gulp.task('templates', function () {
-    return gulp.src(globs.templates)
-        .pipe(plugins.minifyHtml({
-            empty: true,
-            spare: true,
-            quotes: true
-        }))
-        .pipe(plugins.ngHtml2js({moduleName: 'templates'}))
-        .pipe(plugins.concat('templates.js'))
-        .pipe(isDist ? plugins.uglify() : plugins.util.noop())
-        .pipe(gulp.dest(destinations.js));
+  return gulp.src(globs.templates)
+    .pipe(plugins.jade({}))
+    .pipe(plugins.minifyHtml({
+      empty: true,
+      spare: true,
+      quotes: true
+    }))
+    .pipe(plugins.ngHtml2js({moduleName: 'templates'}))
+    .pipe(plugins.concat('templates.js'))
+    .pipe(isDist ? plugins.uglify() : plugins.util.noop())
+    .pipe(gitshasuffix())
+    .pipe(gulp.dest(destinations.js));
 });
 
 gulp.task('clean', function () {
@@ -142,7 +148,9 @@ gulp.task('copy-assets', function () {
 
 gulp.task('index', function () {
     var target = gulp.src(globs.index);
-    return target.pipe(
+    return target
+      .pipe(plugins.jade())
+      .pipe(
         plugins.inject(gulp.src(injectPaths, {read: false}), {
             ignorePath: outputFolder,
             addRootSlash: false

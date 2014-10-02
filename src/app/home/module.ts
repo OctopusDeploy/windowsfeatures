@@ -11,7 +11,7 @@ function homeConfig($stateProvider: ng.ui.IStateProvider) {
 }
 
 angular
-  .module("ngBoilerplate.home", [
+  .module("windowsfeatures.home", [
     "home.index",
     "home.directives",
     "ui.router.state"

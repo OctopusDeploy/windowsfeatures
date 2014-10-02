@@ -7,9 +7,9 @@ function appConfig($urlRouterProvider: ng.ui.IUrlRouterProvider) {
 }
 
 angular
-  .module("ngBoilerplate", [
+  .module("windowsfeatures", [
     "templates",
-    "ngBoilerplate.home",
+    "windowsfeatures.home",
     "ui.router.state"
   ])
   .config(appConfig);

@@ -1,7 +1,7 @@
 /// <reference path="../../types/types.ts"/>
 
 angular
-  .module("ngBoilerplate")
+  .module("windowsfeatures")
   .config(exceptionDecorator);
 
 /* @ngInject */

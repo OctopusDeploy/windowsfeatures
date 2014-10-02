@@ -1,0 +1,16 @@
+doctype html
+html(ng-app="windowsfeatures", ng-strict-di)
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title(ng-bind="pageTitle + ' | windowsfeatures'")
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    body
+    h1 Hello
+      
+    div(ui-view)
+
+    <!-- inject:js -->
+    <!-- endinject -->
