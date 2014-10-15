@@ -1,18 +1,20 @@
 /// <reference path="../../types/types.ts"/>
 
-class HomeService implements core.IHomeService {
-  private logGreeting(greeting: string) {
-    console.log("Received greeting: " + greeting);
-  }
+module windowsfeatures.services.home {
+    "use strict";
 
-  getGreeting(greeting) {
-    this.logGreeting(greeting);
-    // do something else
-    return {"greeting": greeting};
-  }
+    export class HomeService implements core.IHomeService {
+        getOperatingSystems() {
+            return [
+                {name: "Win2008", displayName: "Windows Server 2008 R2"},
+                {name: "Win2012", displayName: "Windows Server 2012/2012R2"},
+            ];
+        }
+    }
+
+    angular
+        .module("windowsfeatures.services.home", [])
+        .service("HomeService", HomeService);
+
 }
 
-
-angular
-  .module("home.services", [])
-  .service("HomeService", HomeService);

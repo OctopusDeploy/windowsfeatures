@@ -1,3 +1,35 @@
-Say hello:
-input(type="text", ng-model="vm.times", ngb-postfix="times")
-p {{ vm.greeting }} World!
+.row.clearfix
+    .column.half
+        p Operating System
+        select(ng-model="vm.selectedOs" ng-change="vm.selectedOsChanged()" ng-options="os.displayName for os in vm.operatingSystems")
+            option(value="") -- select operating system --
+
+    .column.half
+        p.align-left Roles and Features
+        js-tree(tree-config="jsTreeConfig" tree-plugins="checkbox" tree-data="scope" tree-model="rolesAndFeatures" tree-events="check_node:nodeSelected;uncheck_node:nodeDeselected;check_all:allNodesSelected")
+
+div(ng-show="vm.osSelected() !== undefined")
+    hr
+    .button(ng-click="vm.generateScript()") Generate Script
+
+div(ng-show="vm.scriptCreated")
+    hr
+    .row
+        .row.clearfix(ng-show="vm.scriptGenerated() === 'Win2008'")
+            .container
+                p Deployment Image Servicing and Management (DISM)
+                pre
+                    code {{vm.dismScript}}
+
+
+        .row.clearfix(ng-show="vm.scriptGenerated() === 'Win2012'")
+            .container
+                p PowerShell Server Manager Cmdlet
+                pre
+                    code {{vm.cmdletScript}}
+
+        .row.clearfix(ng-hide="vm.scriptGenerated() === ''")
+            .container
+                p PowerShell Desired State Configuration (DSC)
+                pre
+                    code {{vm.dscScript}}

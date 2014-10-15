@@ -2,16 +2,25 @@
 
 declare module core {
 
-  interface IRootScope extends ng.IScope {
-    pageTitle: string;
-  }
+    interface IRootScope extends ng.IScope {
+        siteTitle: string;
+        pageTitle: string;
+        pageDescription: string;
+        operatingSystems: any[];
+        selectedOs: any;
+        rolesAndFeatures: any[];
+        dismScript: string;
+        cmdletScript: string;
+        dscScript: string;
+    }
 
-  // Only add interfaces for the things shared or used in other modules
-  interface IGreeting {
-    greeting: string;
-  }
+    interface IHomeService {
+        getOperatingSystems(): any[];
+    }
 
-  interface IHomeService {
-    getGreeting(greeting: string): IGreeting;
-  }
+    interface IDataService {
+        RolesAndFeatures(osId: string): any;
+        OperatingSystems(): any[];
+
+    }
 }

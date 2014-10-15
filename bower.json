@@ -1,0 +1,25 @@
+{
+  "name": "windowsfeatures",
+  "version": "1.0.0",
+  "authors": [
+    "Octopus Deploy"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jstree-directive": "~0.1.2",
+    "jquery": "~2.1.1",
+    "jstree": "~3.0.4",
+    "angular-resource": "~1.2.26",
+    "angular-route": "~1.2.26"
+  }
+}

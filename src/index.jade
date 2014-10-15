@@ -1,5 +1,5 @@
 doctype html
-html(ng-app="windowsfeatures", ng-strict-di)
+html(ng-app="windowsfeatures" ng-controller="HomeController as vm")
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -8,9 +8,11 @@ html(ng-app="windowsfeatures", ng-strict-di)
     <!-- endinject -->
 
     body
-    h1 Hello
-      
-    div(ui-view)
+        include ./views/shared/header.jade
+
+        section
+            .container
+                div(ng-view)
 
     <!-- inject:js -->
     <!-- endinject -->

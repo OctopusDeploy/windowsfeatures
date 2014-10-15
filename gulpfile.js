@@ -17,6 +17,7 @@ var globs = {
     app: 'src/app/**/*.ts',
     appWithDefinitions: 'src/**/*.ts',
     integration: 'src/tests/integration/**/*.js',
+    data: 'src/app/**/*.json',
     index: 'src/index.jade'
 };
 
@@ -25,6 +26,7 @@ var destinations = {
     js: "" + outputFolder + "/src",
     libs: "" + outputFolder + "/vendor",
     assets: "" + outputFolder + "/assets",
+    /*data: "" + outputFolder + "/data",*/
     index: "" + outputFolder
 };
 
@@ -33,13 +35,25 @@ var destinations = {
 var vendoredLibs = [
     'vendor/angular.js',
     'vendor/ui-router.js',
+    'bower_components/angular-resource/angular-resource.js',
+    'bower_components/angular-route/angular-route.js',
     'vendor/lodash.js',
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/jstree/dist/jstree.js',
+    'vendor/jsTree.directive.js'
+];
+
+var vendoredStyles = [
+    'bower_components/jstree/dist/themes/default/*.gif',
+    'bower_components/jstree/dist/themes/default/*.png',
+    'bower_components/jstree/dist/themes/default/style.css'
 ];
 
 var injectLibsPaths = [];
 
 vendoredLibs.forEach(function(lib) {
-    injectLibsPaths.push(destinations.libs + '/' + lib.split('/')[1]);
+    var libParts = lib.split('/');
+    injectLibsPaths.push(destinations.libs + '/' + libParts[libParts.length - 1]);
 });
 
 var injectPaths = injectLibsPaths.concat([
@@ -99,7 +113,6 @@ gulp.task('templates', function () {
     .pipe(plugins.ngHtml2js({moduleName: 'templates'}))
     .pipe(plugins.concat('templates.js'))
     .pipe(isDist ? plugins.uglify() : plugins.util.noop())
-    .pipe(gitshasuffix())
     .pipe(gulp.dest(destinations.js));
 });
 
@@ -135,15 +148,26 @@ gulp.task('browser-sync', function () {
   });
 });
 
-gulp.task('copy-vendor', function () {
+gulp.task('copy-vendor', ['copy-vendor-styles'], function () {
     return gulp.src(vendoredLibs)
         .pipe(isDist ? plugins.uglify() : plugins.util.noop())
         .pipe(gulp.dest(destinations.libs));
 });
 
+gulp.task('copy-vendor-styles', function() {
+    return gulp.src(vendoredStyles)
+      .pipe(isDist ? plugins.uglify() : plugins.util.noop())
+      .pipe(gulp.dest(destinations.css));
+});
+
 gulp.task('copy-assets', function () {
     return gulp.src(globs.assets)
         .pipe(gulp.dest(destinations.assets));
+});
+
+gulp.task('copy-data', function() {
+    return gulp.src(globs.data)
+      .pipe(gulp.dest(destinations.js));
 });
 
 gulp.task('index', function () {
@@ -158,12 +182,14 @@ gulp.task('index', function () {
     ).pipe(gulp.dest(destinations.index));
 });
 
-gulp.task('watch', ['browser-sync'], function () {
+gulp.task('watch', ['build', 'browser-sync'], function () {
     gulp.watch(globs.sass, ['sass']);
     gulp.watch(globs.appWithDefinitions, ['ts-lint', 'ts-compile']);
     gulp.watch(globs.templates, ['templates']);
     gulp.watch(globs.index, ['index']);
     gulp.watch(globs.assets, ['copy-assets']);
+    gulp.watch(globs.data, ['copy-data']);
+    gulp.watch("bower_components/**/*.js", ['copy-vendor']);
 
     gulp.watch('build/**/*', function(file) {
       if (file.type === "changed") {
@@ -175,7 +201,7 @@ gulp.task('watch', ['browser-sync'], function () {
 gulp.task('build', function () {
     return runSequence(
         'clean',
-        ['sass', 'copy-assets', 'ts-compile', 'templates', 'copy-vendor'],
+        ['sass', 'copy-assets', 'copy-data', 'ts-compile', 'templates', 'copy-vendor'],
         'index'
     );
 });

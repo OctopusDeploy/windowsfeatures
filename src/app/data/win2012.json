@@ -1,0 +1,122 @@
+[
+  {
+    "id":  "AD-Certificate",
+    "text":  "Active Directory Certificate Services",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "#",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AD-Domain-Services",
+    "text":  "Active Directory Domain Services",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "#",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADCS-Cert-Authority",
+    "text":  "Certification Authority",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "AD-Certificate",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADCS-Enroll-Web-Pol",
+    "text":  "Certificate Enrollment Policy Web Service",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "AD-Certificate",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADCS-Enroll-Web-Svc",
+    "text":  "Certificate Enrollment Web Service",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "AD-Certificate",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADCS-Web-Enrollment",
+    "text":  "Certification Authority Web Enrollment",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "AD-Certificate",
+    "li_attr": {},
+    "a_attr": {},
+    "dependsOn": [
+      "NET-Framework-45-Core"
+    ]
+  },
+  {
+    "id":  "ADCS-Device-Enrollment",
+    "text":  "Network Device Enrollment Service",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "AD-Certificate",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADCS-Online-Cert",
+    "text":  "Online Responder",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "AD-Certificate",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-Framework-45-Core",
+    "text":  ".NET Framework 4.5",
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "parent": "#",
+    "li_attr": {},
+    "a_attr": {}
+  }
+]
