@@ -2,120 +2,5909 @@
   {
     "id":  "AD-Certificate",
     "text":  "Active Directory Certificate Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "ADCS-Cert-Authority",
+      "ADCS-Enroll-Web-Pol",
+      "ADCS-Enroll-Web-Svc",
+      "ADCS-Web-Enrollment",
+      "ADCS-Device-Enrollment",
+      "ADCS-Online-Cert"
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
-    "parent": "#",
-    "li_attr": {},
-    "a_attr": {}
-  },
-  {
-    "id":  "AD-Domain-Services",
-    "text":  "Active Directory Domain Services",
-    "icon": false,
-    "state": {
-      "opened": false,
-      "disabled": false,
-      "selected": false
-    },
-    "parent": "#",
     "li_attr": {},
     "a_attr": {}
   },
   {
     "id":  "ADCS-Cert-Authority",
     "text":  "Certification Authority",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "AD-Certificate",
+    "SubFeatures":  [
+
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
-    "parent": "AD-Certificate",
     "li_attr": {},
     "a_attr": {}
   },
   {
     "id":  "ADCS-Enroll-Web-Pol",
     "text":  "Certificate Enrollment Policy Web Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "NET-WCF-HTTP-Activation45",
+      "Web-Http-Logging",
+      "Web-Default-Doc",
+      "Web-Static-Content",
+      "Web-Stat-Compression",
+      "Web-Request-Monitor",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Filtering",
+      "Web-Scripting-Tools",
+      "Web-Windows-Auth",
+      "Web-Client-Auth",
+      "Web-Cert-Auth",
+      "Web-Net-Ext45"
+    ],
+    "parent":  "AD-Certificate",
+    "SubFeatures":  [
+
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
-    "parent": "AD-Certificate",
     "li_attr": {},
     "a_attr": {}
   },
   {
     "id":  "ADCS-Enroll-Web-Svc",
     "text":  "Certificate Enrollment Web Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "NET-WCF-HTTP-Activation45",
+      "Web-Http-Logging",
+      "Web-Default-Doc",
+      "Web-Static-Content",
+      "Web-Stat-Compression",
+      "Web-Request-Monitor",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Filtering",
+      "Web-Scripting-Tools",
+      "Web-Windows-Auth",
+      "Web-Client-Auth",
+      "Web-Cert-Auth",
+      "Web-Net-Ext45"
+    ],
+    "parent":  "AD-Certificate",
+    "SubFeatures":  [
+
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
-    "parent": "AD-Certificate",
     "li_attr": {},
     "a_attr": {}
   },
   {
     "id":  "ADCS-Web-Enrollment",
     "text":  "Certification Authority Web Enrollment",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Stat-Compression",
+      "Web-ASP",
+      "Web-ISAPI-Ext",
+      "Web-Windows-Auth",
+      "Web-Metabase"
+    ],
+    "parent":  "AD-Certificate",
+    "SubFeatures":  [
+
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
-    "parent": "AD-Certificate",
     "li_attr": {},
-    "a_attr": {},
-    "dependsOn": [
-      "NET-Framework-45-Core"
-    ]
+    "a_attr": {}
   },
   {
     "id":  "ADCS-Device-Enrollment",
     "text":  "Network Device Enrollment Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Stat-Compression",
+      "Web-ISAPI-Ext",
+      "Web-Windows-Auth",
+      "Web-Metabase"
+    ],
+    "parent":  "AD-Certificate",
+    "SubFeatures":  [
+
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
-    "parent": "AD-Certificate",
     "li_attr": {},
     "a_attr": {}
   },
   {
     "id":  "ADCS-Online-Cert",
     "text":  "Online Responder",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Stat-Compression",
+      "Web-ISAPI-Ext",
+      "Web-Metabase"
+    ],
+    "parent":  "AD-Certificate",
+    "SubFeatures":  [
+
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
-    "parent": "AD-Certificate",
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AD-Domain-Services",
+    "text":  "Active Directory Domain Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "PowerShell",
+      "RSAT-AD-PowerShell"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AD-Federation-Services",
+    "text":  "Active Directory Federation Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "ADFS-Federation",
+      "ADFS-Web-Agents",
+      "ADFS-Proxy"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADFS-Federation",
+    "text":  "Federation Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NET-WCF-HTTP-Activation45",
+      "Web-Asp-Net45",
+      "Web-Client-Auth",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Stat-Compression",
+      "Web-Http-Errors",
+      "Web-Http-Logging",
+      "Web-Http-Redirect",
+      "Web-ISAPI-Ext",
+      "Web-ISAPI-Filter",
+      "Web-Mgmt-Console",
+      "Web-Net-Ext45",
+      "Web-Filtering",
+      "Web-Static-Content",
+      "Web-Windows-Auth",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "AD-Federation-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADFS-Web-Agents",
+    "text":  "AD FS 1.1 Web Agents",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "AD-Federation-Services",
+    "SubFeatures":  [
+      "ADFS-Claims",
+      "ADFS-Windows-Token"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADFS-Claims",
+    "text":  "AD FS 1.1 Claims-aware Agent",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Asp-Net45",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "ADFS-Web-Agents",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADFS-Windows-Token",
+    "text":  "AD FS 1.1 Windows Token-based Agent",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Net-Ext45",
+      "Web-ISAPI-Ext",
+      "Web-ISAPI-Filter",
+      "Web-Mgmt-Console",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "ADFS-Web-Agents",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADFS-Proxy",
+    "text":  "Federation Service Proxy",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NET-WCF-HTTP-Activation45",
+      "Web-Asp-Net45",
+      "Web-Client-Auth",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Stat-Compression",
+      "Web-Http-Errors",
+      "Web-Http-Logging",
+      "Web-Http-Redirect",
+      "Web-ISAPI-Ext",
+      "Web-ISAPI-Filter",
+      "Web-Mgmt-Console",
+      "Web-Net-Ext45",
+      "Web-Filtering",
+      "Web-Static-Content",
+      "Web-Windows-Auth"
+    ],
+    "parent":  "AD-Federation-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADLDS",
+    "text":  "Active Directory Lightweight Directory Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "PowerShell",
+      "RSAT-AD-PowerShell"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADRMS",
+    "text":  "Active Directory Rights Management Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "ADRMS-Server",
+      "ADRMS-Identity"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADRMS-Server",
+    "text":  "Active Directory Rights Management Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "NET-WCF-HTTP-Activation45",
+      "PowerShell",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Stat-Compression",
+      "Web-Net-Ext45",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Filtering",
+      "Web-Http-Tracing",
+      "Web-Metabase",
+      "Web-WMI",
+      "Web-Asp-Net45",
+      "Web-Windows-Auth"
+    ],
+    "parent":  "ADRMS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ADRMS-Identity",
+    "text":  "Identity Federation Support",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "ADRMS-Server",
+      "ADFS-Claims"
+    ],
+    "parent":  "ADRMS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Application-Server",
+    "text":  "Application Server",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "AS-NET-Framework",
+      "AS-Ent-Services",
+      "AS-Dist-Transaction",
+      "AS-TCP-Port-Sharing",
+      "AS-Web-Support",
+      "AS-WAS-Support"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-NET-Framework",
+    "text":  ".NET Framework 4.5",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Application-Server",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-Ent-Services",
+    "text":  "COM+ Network Access",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Application-Server",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-Dist-Transaction",
+    "text":  "Distributed Transactions",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Application-Server",
+    "SubFeatures":  [
+      "AS-WS-Atomic",
+      "AS-Incoming-Trans",
+      "AS-Outgoing-Trans"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}  },
+  {
+    "id":  "AS-WS-Atomic",
+    "text":  "WS-Atomic Transactions",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework"
+    ],
+    "parent":  "AS-Dist-Transaction",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-Incoming-Trans",
+    "text":  "Incoming Network Transactions",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "AS-Dist-Transaction",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-Outgoing-Trans",
+    "text":  "Outgoing Network Transactions",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "AS-Dist-Transaction",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-TCP-Port-Sharing",
+    "text":  "TCP Port Sharing",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "NET-WCF-TCP-PortSharing45"
+    ],
+    "parent":  "Application-Server",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-Web-Support",
+    "text":  "Web Server (IIS) Support",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Asp-Net45",
+      "Web-ISAPI-Ext",
+      "Web-ISAPI-Filter",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Basic-Auth",
+      "Web-Windows-Auth",
+      "Web-Digest-Auth",
+      "Web-Client-Auth",
+      "Web-Cert-Auth",
+      "Web-Url-Auth",
+      "Web-Filtering",
+      "Web-IP-Security",
+      "Web-Stat-Compression",
+      "Web-Dyn-Compression",
+      "Web-Scripting-Tools",
+      "Web-Mgmt-Console",
+      "Web-Net-Ext45",
+      "NET-Framework-45-ASPNET"
+    ],
+    "parent":  "Application-Server",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-WAS-Support",
+    "text":  "Windows Process Activation Service Support",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Application-Server",
+    "SubFeatures":  [
+      "AS-HTTP-Activation",
+      "AS-MSMQ-Activation",
+      "AS-textd-Pipes",
+      "AS-TCP-Activation"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-HTTP-Activation",
+    "text":  "HTTP Activation",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "NET-WCF-HTTP-Activation45",
+      "NET-WCF-TCP-PortSharing45",
+      "NET-Framework-45-ASPNET",
+      "Web-Asp-Net45",
+      "WAS-Process-Model",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "AS-WAS-Support",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-MSMQ-Activation",
+    "text":  "Message Queuing Activation",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "NET-Framework-45-ASPNET",
+      "WAS-Process-Model",
+      "WAS-Config-APIs",
+      "MSMQ-Server",
+      "NET-WCF-MSMQ-Activation45"
+    ],
+    "parent":  "AS-WAS-Support",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-textd-Pipes",
+    "text":  "textd Pipes Activation",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "NET-WCF-Pipe-Activation45",
+      "NET-Framework-45-ASPNET",
+      "WAS-Process-Model",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "AS-WAS-Support",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "AS-TCP-Activation",
+    "text":  "TCP Activation",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "AS-NET-Framework",
+      "AS-TCP-Port-Sharing",
+      "NET-WCF-TCP-Activation45",
+      "NET-WCF-TCP-PortSharing45",
+      "NET-Framework-45-ASPNET",
+      "WAS-Process-Model",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "AS-WAS-Support",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "DHCP",
+    "text":  "DHCP Server",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "DNS",
+    "text":  "DNS Server",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Fax",
+    "text":  "Fax Server",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+      "Print-Server",
+      "Server-Gui-Shell"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FileAndStorage-Services",
+    "text":  "File And Storage Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "File-Services",
+      "Storage-Services"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "File-Services",
+    "text":  "File and iSCSI Services",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "FileAndStorage-Services",
+    "SubFeatures":  [
+      "FS-FileServer",
+      "FS-BranchCache",
+      "FS-Data-Deduplication",
+      "FS-DFS-textspace",
+      "FS-DFS-Replication",
+      "FS-Resource-Manager",
+      "FS-VSS-Agent",
+      "FS-iSCSITarget-Server",
+      "iSCSITarget-VSS-VDS",
+      "FS-NFS-Service"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-FileServer",
+    "text":  "File Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-BranchCache",
+    "text":  "BranchCache for Network Files",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-Data-Deduplication",
+    "text":  "Data Deduplication",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-DFS-textspace",
+    "text":  "DFS textspaces",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-DFS-Replication",
+    "text":  "DFS Replication",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-Resource-Manager",
+    "text":  "File Server Resource Manager",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer",
+      "NET-Framework-45-Core"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-VSS-Agent",
+    "text":  "File Server VSS Agent Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-iSCSITarget-Server",
+    "text":  "iSCSI Target Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "iSCSITarget-VSS-VDS",
+    "text":  "iSCSI Target Storage Provider (VDS and VSS hardware providers)",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "FS-NFS-Service",
+    "text":  "Server for NFS",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "FS-FileServer"
+    ],
+    "parent":  "File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Storage-Services",
+    "text":  "Storage Services",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "FileAndStorage-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Hyper-V",
+    "text":  "Hyper-V",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NPAS",
+    "text":  "Network Policy and Access Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "NPAS-Policy-Server",
+      "NPAS-Health",
+      "NPAS-Host-Cred"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NPAS-Policy-Server",
+    "text":  "Network Policy Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "NPAS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NPAS-Health",
+    "text":  "Health Registration Authority",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NPAS-Policy-Server",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Stat-Compression",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Mgmt-Console",
+      "Web-ISAPI-Ext",
+      "Web-Client-Auth",
+      "Web-Windows-Auth",
+      "Web-Metabase",
+      "Web-WMI",
+      "Web-Lgcy-Scripting",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "NPAS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NPAS-Host-Cred",
+    "text":  "Host Credential Authorization Protocol",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NPAS-Policy-Server",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Stat-Compression",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Mgmt-Console",
+      "Web-ISAPI-Ext",
+      "Web-Client-Auth",
+      "Web-Cert-Auth",
+      "Web-Basic-Auth",
+      "Web-Digest-Auth",
+      "Web-Metabase",
+      "Web-WMI",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "NPAS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Print-Services",
+    "text":  "Print and Document Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "Print-Server",
+      "Print-Scan-Server",
+      "Print-Internet",
+      "Print-LPD-Service"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Print-Server",
+    "text":  "Print Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "WoW64-Support"
+    ],
+    "parent":  "Print-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Print-Scan-Server",
+    "text":  "Distributed Scan Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Print-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Print-Internet",
+    "text":  "Internet Printing",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Print-Server",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Net-Ext45",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Stat-Compression",
+      "Web-Mgmt-Console",
+      "Web-ASP",
+      "Web-ISAPI-Ext",
+      "Web-ISAPI-Filter",
+      "Web-Basic-Auth",
+      "Web-Windows-Auth",
+      "Web-Metabase",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Print-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Print-LPD-Service",
+    "text":  "LPD Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Print-Server"
+    ],
+    "parent":  "Print-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RemoteAccess",
+    "text":  "Remote Access",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "DirectAccess-VPN",
+      "Routing"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "DirectAccess-VPN",
+    "text":  "DirectAccess and VPN (RAS)",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Windows-Internal-Database",
+      "Web-Scripting-Tools",
+      "Web-Default-Doc",
+      "Web-Static-Content",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Logging",
+      "Web-Stat-Compression",
+      "Web-Filtering",
+      "Web-IP-Security",
+      "PowerShell"
+    ],
+    "parent":  "RemoteAccess",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Routing",
+    "text":  "Routing",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "DirectAccess-VPN"
+    ],
+    "parent":  "RemoteAccess",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Remote-Desktop-Services",
+    "text":  "Remote Desktop Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "RDS-Connection-Broker",
+      "RDS-Gateway",
+      "RDS-Licensing",
+      "RDS-RD-Server",
+      "RDS-Virtualization",
+      "RDS-Web-Access"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDS-Connection-Broker",
+    "text":  "Remote Desktop Connection Broker",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Windows-Internal-Database"
+    ],
+    "parent":  "Remote-Desktop-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDS-Gateway",
+    "text":  "Remote Desktop Gateway",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Metabase",
+      "RPC-over-HTTP-Proxy",
+      "NPAS-Policy-Server",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Remote-Desktop-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDS-Licensing",
+    "text":  "Remote Desktop Licensing",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Remote-Desktop-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDS-RD-Server",
+    "text":  "Remote Desktop Session Host",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Server-Media-Foundation",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Remote-Desktop-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDS-Virtualization",
+    "text":  "Remote Desktop Virtualization Host",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Hyper-V",
+      "Server-Media-Foundation"
+    ],
+    "parent":  "Remote-Desktop-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDS-Web-Access",
+    "text":  "Remote Desktop Web Access",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Net-Ext45",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Stat-Compression",
+      "Web-Mgmt-Console",
+      "Web-Windows-Auth",
+      "Web-Asp-Net45",
+      "NET-Framework-45-ASPNET",
+      "Web-Scripting-Tools"
+    ],
+    "parent":  "Remote-Desktop-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "VolumeActivation",
+    "text":  "Volume Activation Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Server",
+    "text":  "Web Server (IIS)",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "Web-WebServer",
+      "Web-Ftp-Server",
+      "Web-WHC",
+      "Web-Mgmt-Tools"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-WebServer",
+    "text":  "Web Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Server",
+    "SubFeatures":  [
+      "Web-Common-Http",
+      "Web-Health",
+      "Web-Performance",
+      "Web-Security",
+      "Web-App-Dev"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Common-Http",
+    "text":  "Common HTTP Features",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-WebServer",
+    "SubFeatures":  [
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Static-Content",
+      "Web-Http-Redirect",
+      "Web-DAV-Publishing"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Default-Doc",
+    "text":  "Default Document",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Common-Http",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Dir-Browsing",
+    "text":  "Directory Browsing",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Common-Http",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Http-Errors",
+    "text":  "HTTP Errors",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Common-Http",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Static-Content",
+    "text":  "Static Content",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Common-Http",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Http-Redirect",
+    "text":  "HTTP Redirection",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Common-Http",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-DAV-Publishing",
+    "text":  "WebDAV Publishing",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Static-Content"
+    ],
+    "parent":  "Web-Common-Http",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Health",
+    "text":  "Health and Diagnostics",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-WebServer",
+    "SubFeatures":  [
+      "Web-Http-Logging",
+      "Web-Custom-Logging",
+      "Web-Log-Libraries",
+      "Web-ODBC-Logging",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Http-Logging",
+    "text":  "HTTP Logging",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Health",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Custom-Logging",
+    "text":  "Custom Logging",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Health",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Log-Libraries",
+    "text":  "Logging Tools",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Health",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-ODBC-Logging",
+    "text":  "ODBC Logging",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Health",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Request-Monitor",
+    "text":  "Request Monitor",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Health",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Http-Tracing",
+    "text":  "Tracing",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Health",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Performance",
+    "text":  "Performance",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-WebServer",
+    "SubFeatures":  [
+      "Web-Stat-Compression",
+      "Web-Dyn-Compression"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Stat-Compression",
+    "text":  "Static Content Compression",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Performance",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Dyn-Compression",
+    "text":  "Dynamic Content Compression",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Performance",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Security",
+    "text":  "Security",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-WebServer",
+    "SubFeatures":  [
+      "Web-Filtering",
+      "Web-Basic-Auth",
+      "Web-CertProvider",
+      "Web-Client-Auth",
+      "Web-Digest-Auth",
+      "Web-Cert-Auth",
+      "Web-IP-Security",
+      "Web-Url-Auth",
+      "Web-Windows-Auth"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Filtering",
+    "text":  "Request Filtering",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Basic-Auth",
+    "text":  "Basic Authentication",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-CertProvider",
+    "text":  "Centralized SSL Certificate Support",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Client-Auth",
+    "text":  "Client Certificate Mapping Authentication",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Digest-Auth",
+    "text":  "Digest Authentication",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Cert-Auth",
+    "text":  "IIS Client Certificate Mapping Authentication",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-IP-Security",
+    "text":  "IP and Domain Restrictions",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Url-Auth",
+    "text":  "URL Authorization",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Windows-Auth",
+    "text":  "Windows Authentication",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Security",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-App-Dev",
+    "text":  "Application Development",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-WebServer",
+    "SubFeatures":  [
+      "Web-Net-Ext",
+      "Web-Net-Ext45",
+      "Web-AppInit",
+      "Web-ASP",
+      "Web-Asp-Net",
+      "Web-Asp-Net45",
+      "Web-CGI",
+      "Web-ISAPI-Ext",
+      "Web-ISAPI-Filter",
+      "Web-Includes",
+      "Web-WebSockets"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Net-Ext",
+    "text":  ".NET Extensibility 3.5",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Filtering",
+      "NET-Framework-Core",
+      "NET-Framework-45-ASPNET"
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Net-Ext45",
+    "text":  ".NET Extensibility 4.5",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Filtering",
+      "NET-Framework-45-ASPNET"
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-AppInit",
+    "text":  "Application Initialization",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-ASP",
+    "text":  "ASP",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Filtering",
+      "Web-ISAPI-Ext"
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Asp-Net",
+    "text":  "ASP.NET 3.5",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Default-Doc",
+      "Web-ISAPI-Filter",
+      "Web-ISAPI-Ext",
+      "Web-Net-Ext"
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Asp-Net45",
+    "text":  "ASP.NET 4.5",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Filtering",
+      "Web-Default-Doc",
+      "Web-ISAPI-Filter",
+      "Web-ISAPI-Ext",
+      "Web-Net-Ext45"
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-CGI",
+    "text":  "CGI",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-ISAPI-Ext",
+    "text":  "ISAPI Extensions",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-ISAPI-Filter",
+    "text":  "ISAPI Filters",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Includes",
+    "text":  "Server Side Includes",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-WebSockets",
+    "text":  "WebSocket Protocol",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-App-Dev",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Ftp-Server",
+    "text":  "FTP Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Server",
+    "SubFeatures":  [
+      "Web-Ftp-Service",
+      "Web-Ftp-Ext"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Ftp-Service",
+    "text":  "FTP Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Ftp-Server",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Ftp-Ext",
+    "text":  "FTP Extensibility",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Ftp-Service"
+    ],
+    "parent":  "Web-Ftp-Server",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-WHC",
+    "text":  "IIS Hostable Web Core",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Server",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Mgmt-Tools",
+    "text":  "Management Tools",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Server",
+    "SubFeatures":  [
+      "Web-Mgmt-Console",
+      "Web-Mgmt-Compat",
+      "Web-Scripting-Tools",
+      "Web-Mgmt-Service"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Mgmt-Console",
+    "text":  "IIS Management Console",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Web-Mgmt-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Mgmt-Compat",
+    "text":  "IIS 6 Management Compatibility",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Mgmt-Tools",
+    "SubFeatures":  [
+      "Web-Metabase",
+      "Web-Lgcy-Mgmt-Console",
+      "Web-Lgcy-Scripting",
+      "Web-WMI"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Metabase",
+    "text":  "IIS 6 Metabase Compatibility",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Mgmt-Compat",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Lgcy-Mgmt-Console",
+    "text":  "IIS 6 Management Console",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Metabase",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "Web-Mgmt-Compat",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Lgcy-Scripting",
+    "text":  "IIS 6 Scripting Tools",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Metabase",
+      "Web-WMI"
+    ],
+    "parent":  "Web-Mgmt-Compat",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-WMI",
+    "text":  "IIS 6 WMI Compatibility",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "Web-Metabase"
+    ],
+    "parent":  "Web-Mgmt-Compat",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Scripting-Tools",
+    "text":  "IIS Management Scripts and Tools",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "Web-Mgmt-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Web-Mgmt-Service",
+    "text":  "Management Service",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "NET-Framework-45-ASPNET"
+    ],
+    "parent":  "Web-Mgmt-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WDS",
+    "text":  "Windows Deployment Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "WDS-Deployment",
+      "WDS-Transport"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WDS-Deployment",
+    "text":  "Deployment Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "WDS-Transport"
+    ],
+    "parent":  "WDS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WDS-Transport",
+    "text":  "Transport Server",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+
+    ],
+    "parent":  "WDS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "UpdateServices",
+    "text":  "Windows Server Update Services",
+    "FeatureType":  "Role",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "UpdateServices-WidDB",
+      "UpdateServices-Services",
+      "UpdateServices-DB"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "UpdateServices-WidDB",
+    "text":  "WID Database",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "UpdateServices-Services",
+      "Windows-Internal-Database"
+    ],
+    "parent":  "UpdateServices",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "UpdateServices-Services",
+    "text":  "WSUS Services",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "UpdateServices-API",
+      "Web-Metabase",
+      "Web-Windows-Auth",
+      "Web-Mgmt-Compat",
+      "Web-Asp-Net45",
+      "Web-Dyn-Compression",
+      "WAS-Config-APIs",
+      "Web-Static-Content"
+    ],
+    "parent":  "UpdateServices",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "UpdateServices-DB",
+    "text":  "Database",
+    "FeatureType":  "Role Service",
+    "dependsOn":  [
+      "UpdateServices-Services"
+    ],
+    "parent":  "UpdateServices",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-Framework-Features",
+    "text":  ".NET Framework 3.5 Features",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "NET-Framework-Core",
+      "NET-HTTP-Activation",
+      "NET-Non-HTTP-Activ"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-Framework-Core",
+    "text":  ".NET Framework 3.5 (includes .NET 2.0 and 3.0)",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "NET-Framework-Features",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-HTTP-Activation",
+    "text":  "HTTP Activation",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-Core",
+      "Web-Net-Ext",
+      "WAS-Process-Model",
+      "WAS-NET-Environment",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "NET-Framework-Features",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-Non-HTTP-Activ",
+    "text":  "Non-HTTP Activation",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-Core",
+      "WAS-Process-Model",
+      "WAS-NET-Environment",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "NET-Framework-Features",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-Framework-45-Features",
+    "text":  ".NET Framework 4.5 Features",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "NET-Framework-45-Core",
+      "NET-Framework-45-ASPNET",
+      "NET-WCF-Services45"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
     "li_attr": {},
     "a_attr": {}
   },
   {
     "id":  "NET-Framework-45-Core",
     "text":  ".NET Framework 4.5",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "NET-Framework-45-Features",
+    "SubFeatures":  [
+
+    ],
     "icon": false,
     "state": {
       "opened": false,
       "disabled": false,
       "selected": false
     },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-Framework-45-ASPNET",
+    "text":  "ASP.NET 4.5",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core"
+    ],
+    "parent":  "NET-Framework-45-Features",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-WCF-Services45",
+    "text":  "WCF Services",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core"
+    ],
+    "parent":  "NET-Framework-45-Features",
+    "SubFeatures":  [
+      "NET-WCF-HTTP-Activation45",
+      "NET-WCF-MSMQ-Activation45",
+      "NET-WCF-Pipe-Activation45",
+      "NET-WCF-TCP-Activation45",
+      "NET-WCF-TCP-PortSharing45"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-WCF-HTTP-Activation45",
+    "text":  "HTTP Activation",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "NET-Framework-45-ASPNET",
+      "Web-Asp-Net45",
+      "WAS-Process-Model",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "NET-WCF-Services45",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-WCF-MSMQ-Activation45",
+    "text":  "Message Queuing (MSMQ) Activation",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "NET-Framework-45-ASPNET",
+      "WAS-Process-Model",
+      "WAS-Config-APIs",
+      "MSMQ-Server"
+    ],
+    "parent":  "NET-WCF-Services45",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-WCF-Pipe-Activation45",
+    "text":  "textd Pipe Activation",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "NET-Framework-45-ASPNET",
+      "WAS-Process-Model",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "NET-WCF-Services45",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-WCF-TCP-Activation45",
+    "text":  "TCP Activation",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "NET-WCF-TCP-PortSharing45",
+      "NET-Framework-45-ASPNET",
+      "WAS-Process-Model",
+      "WAS-Config-APIs"
+    ],
+    "parent":  "NET-WCF-Services45",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NET-WCF-TCP-PortSharing45",
+    "text":  "TCP Port Sharing",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core"
+    ],
+    "parent":  "NET-WCF-Services45",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "BITS",
+    "text":  "Background Intelligent Transfer Service (BITS)",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
     "parent": "#",
+    "SubFeatures":  [
+      "BITS-IIS-Ext",
+      "BITS-Compact-Server"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "BITS-IIS-Ext",
+    "text":  "IIS Server Extension",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Stat-Compression",
+      "Web-Mgmt-Console",
+      "Web-ISAPI-Ext",
+      "Web-Metabase",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "BITS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "BITS-Compact-Server",
+    "text":  "Compact Server",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "BITS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "BitLocker",
+    "text":  "BitLocker Drive Encryption",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "EnhancedStorage"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "BitLocker-NetworkUnlock",
+    "text":  "BitLocker Network Unlock",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "WDS-Deployment"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "BranchCache",
+    "text":  "BranchCache",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NFS-Client",
+    "text":  "Client for NFS",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Data-Center-Bridging",
+    "text":  "Data Center Bridging",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "EnhancedStorage",
+    "text":  "Enhanced Storage",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Failover-Clustering",
+    "text":  "Failover Clustering",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "GPMC",
+    "text":  "Group Policy Management",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "InkAndHandwritingServices",
+    "text":  "Ink and Handwriting Services",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Internet-Print-Client",
+    "text":  "Internet Printing Client",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "IPAM",
+    "text":  "IP Address Management (IPAM) Server",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Windows-Internal-Database",
+      "NET-WCF-TCP-Activation45",
+      "RSAT-DHCP",
+      "RSAT-DNS-Server",
+      "GPMC"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ISNS",
+    "text":  "iSNS Server service",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "LPR-Port-Monitor",
+    "text":  "LPR Port Monitor",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "ManagementOdata",
+    "text":  "Management OData IIS Extension",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Stat-Compression",
+      "Web-Http-Logging",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Filtering",
+      "NET-WCF-HTTP-Activation45"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Server-Media-Foundation",
+    "text":  "Media Foundation",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ",
+    "text":  "Message Queuing",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "MSMQ-Services",
+      "MSMQ-DCOM"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-Services",
+    "text":  "Message Queuing Services",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "MSMQ",
+    "SubFeatures":  [
+      "MSMQ-Server",
+      "MSMQ-Directory",
+      "MSMQ-HTTP-Support",
+      "MSMQ-Triggers",
+      "MSMQ-Multicasting",
+      "MSMQ-Routing"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-Server",
+    "text":  "Message Queuing Server",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "MSMQ-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-Directory",
+    "text":  "Directory Service Integration",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "MSMQ-Server"
+    ],
+    "parent":  "MSMQ-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-HTTP-Support",
+    "text":  "HTTP Support",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "MSMQ-Server",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Stat-Compression",
+      "Web-ISAPI-Ext",
+      "Web-Metabase"
+    ],
+    "parent":  "MSMQ-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-Triggers",
+    "text":  "Message Queuing Triggers",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "MSMQ-Server"
+    ],
+    "parent":  "MSMQ-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-Multicasting",
+    "text":  "Multicasting Support",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "MSMQ-Server"
+    ],
+    "parent":  "MSMQ-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-Routing",
+    "text":  "Routing Service",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "MSMQ-Server",
+      "MSMQ-Directory"
+    ],
+    "parent":  "MSMQ-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "MSMQ-DCOM",
+    "text":  "Message Queuing DCOM Proxy",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "MSMQ",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Multipath-IO",
+    "text":  "Multipath I/O",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "NLB",
+    "text":  "Network Load Balancing",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "PNRP",
+    "text":  "Peer text Resolution Protocol",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "qWave",
+    "text":  "Quality Windows Audio Video Experience",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "CMAK",
+    "text":  "RAS Connection Manager Administration Kit (CMAK)",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Remote-Assistance",
+    "text":  "Remote Assistance",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDC",
+    "text":  "Remote Differential Compression",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT",
+    "text":  "Remote Server Administration Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "RSAT-Feature-Tools",
+      "RSAT-Role-Tools"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Feature-Tools",
+    "text":  "Feature Administration Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT",
+    "SubFeatures":  [
+      "RSAT-SMTP",
+      "RSAT-Feature-Tools-BitLocker",
+      "RSAT-Bits-Server",
+      "RSAT-Clustering",
+      "IPAM-Client-Feature",
+      "RSAT-NLB",
+      "RSAT-SNMP",
+      "WSRM-RSAT",
+      "RSAT-WINS"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-SMTP",
+    "text":  "SMTP Server Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-Lgcy-Mgmt-Console"
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Feature-Tools-BitLocker",
+    "text":  "BitLocker Drive Encryption Administration Utilities",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+      "RSAT-Feature-Tools-BitLocker-RemoteAdminTool",
+      "RSAT-Feature-Tools-BitLocker-BdeAducExt"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Feature-Tools-BitLocker-RemoteAdminTool",
+    "text":  "BitLocker Drive Encryption Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Feature-Tools-BitLocker",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Feature-Tools-BitLocker-BdeAducExt",
+    "text":  "BitLocker Recovery Password Viewer",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "RSAT-ADDS-Tools",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Feature-Tools-BitLocker",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Bits-Server",
+    "text":  "BITS Server Extensions Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-Mgmt-Console",
+      "Web-Metabase",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Clustering",
+    "text":  "Failover Clustering Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+      "RSAT-Clustering-Mgmt",
+      "RSAT-Clustering-PowerShell",
+      "RSAT-Clustering-AutomationServer",
+      "RSAT-Clustering-CmdInterface"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Clustering-Mgmt",
+    "text":  "Failover Cluster Management Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Clustering",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Clustering-PowerShell",
+    "text":  "Failover Cluster Module for Windows PowerShell",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Clustering",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Clustering-AutomationServer",
+    "text":  "Failover Cluster Automation Server",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Clustering",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Clustering-CmdInterface",
+    "text":  "Failover Cluster Command Interface",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Clustering",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "IPAM-Client-Feature",
+    "text":  "IP Address Management (IPAM) Client",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "GPMC",
+      "RSAT-DHCP",
+      "RSAT-DNS-Server",
+      "NET-Framework-45-Core"
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-NLB",
+    "text":  "Network Load Balancing Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-SNMP",
+    "text":  "SNMP Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WSRM-RSAT",
+    "text":  "Windows System Resource Manager RSAT [Deprecated]",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-WINS",
+    "text":  "WINS Server Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Feature-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Role-Tools",
+    "text":  "Role Administration Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT",
+    "SubFeatures":  [
+      "RSAT-AD-Tools",
+      "RSAT-Hyper-V-Tools",
+      "RSAT-RDS-Tools",
+      "UpdateServices-RSAT",
+      "RSAT-ADCS",
+      "RSAT-ADRMS",
+      "RSAT-DHCP",
+      "RSAT-DNS-Server",
+      "RSAT-Fax",
+      "RSAT-File-Services",
+      "RSAT-NPAS",
+      "RSAT-Print-Services",
+      "RSAT-RemoteAccess",
+      "RSAT-VA-Tools",
+      "WDS-AdminPack"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-AD-Tools",
+    "text":  "AD DS and AD LDS Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+      "RSAT-AD-PowerShell",
+      "RSAT-ADDS",
+      "RSAT-ADLDS"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-AD-PowerShell",
+    "text":  "Active Directory module for Windows PowerShell",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "PowerShell"
+    ],
+    "parent":  "RSAT-AD-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-ADDS",
+    "text":  "AD DS Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-AD-Tools",
+    "SubFeatures":  [
+      "RSAT-AD-AdminCenter",
+      "RSAT-ADDS-Tools",
+      "RSAT-NIS"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-AD-AdminCenter",
+    "text":  "Active Directory Administrative Center",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "RSAT-AD-PowerShell",
+      "RSAT-ADDS-Tools"
+    ],
+    "parent":  "RSAT-ADDS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-ADDS-Tools",
+    "text":  "AD DS Snap-Ins and Command-Line Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-ADDS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-NIS",
+    "text":  "Server for NIS Tools [DEPRECATED]",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-ADDS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-ADLDS",
+    "text":  "AD LDS Snap-Ins and Command-Line Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-AD-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Hyper-V-Tools",
+    "text":  "Hyper-V Management Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+      "Hyper-V-Tools",
+      "Hyper-V-PowerShell"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Hyper-V-Tools",
+    "text":  "Hyper-V GUI Management Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Hyper-V-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Hyper-V-PowerShell",
+    "text":  "Hyper-V Module for Windows PowerShell",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Hyper-V-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-RDS-Tools",
+    "text":  "Remote Desktop Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+      "RSAT-RDS-Gateway",
+      "RSAT-RDS-Licensing-Diagnosis-UI",
+      "RDS-Licensing-UI"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-RDS-Gateway",
+    "text":  "Remote Desktop Gateway Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-Metabase",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-RDS-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-RDS-Licensing-Diagnosis-UI",
+    "text":  "Remote Desktop Licensing Diagnoser Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-RDS-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RDS-Licensing-UI",
+    "text":  "Remote Desktop Licensing Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-RDS-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "UpdateServices-RSAT",
+    "text":  "Windows Server Update Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+      "UpdateServices-API",
+      "UpdateServices-UI"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "UpdateServices-API",
+    "text":  "API and PowerShell cmdlets",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core"
+    ],
+    "parent":  "UpdateServices-RSAT",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "UpdateServices-UI",
+    "text":  "User Interface Management Console",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "UpdateServices-API",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "UpdateServices-RSAT",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-ADCS",
+    "text":  "Active Directory Certificate Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+      "RSAT-ADCS-Mgmt",
+      "RSAT-Online-Responder"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-ADCS-Mgmt",
+    "text":  "Certification Authority Management Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-ADCS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Online-Responder",
+    "text":  "Online Responder Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-ADCS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-ADRMS",
+    "text":  "Active Directory Rights Management Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-DHCP",
+    "text":  "DHCP Server Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-DNS-Server",
+    "text":  "DNS Server Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Fax",
+    "text":  "Fax Server Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Shell"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-File-Services",
+    "text":  "File Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+      "RSAT-DFS-Mgmt-Con",
+      "RSAT-FSRM-Mgmt",
+      "RSAT-NFS-Admin",
+      "RSAT-CoreFile-Mgmt"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-DFS-Mgmt-Con",
+    "text":  "DFS Management Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-FSRM-Mgmt",
+    "text":  "File Server Resource Manager Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-NFS-Admin",
+    "text":  "Services for Network File System Management Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-CoreFile-Mgmt",
+    "text":  "Share and Storage Management Tool",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-File-Services",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-NPAS",
+    "text":  "Network Policy and Access Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-Print-Services",
+    "text":  "Print and Document Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-RemoteAccess",
+    "text":  "Remote Access Management Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+      "RSAT-RemoteAccess-Mgmt",
+      "RSAT-RemoteAccess-PowerShell"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-RemoteAccess-Mgmt",
+    "text":  "Remote Access GUI and Command-Line Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "RSAT-RemoteAccess-PowerShell",
+      "GPMC",
+      "CMAK",
+      "Server-Gui-Shell"
+    ],
+    "parent":  "RSAT-RemoteAccess",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-RemoteAccess-PowerShell",
+    "text":  "Remote Access module for Windows PowerShell",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "GPMC",
+      "PowerShell"
+    ],
+    "parent":  "RSAT-RemoteAccess",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RSAT-VA-Tools",
+    "text":  "Volume Activation Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WDS-AdminPack",
+    "text":  "Windows Deployment Services Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "RSAT-Role-Tools",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "RPC-over-HTTP-Proxy",
+    "text":  "RPC over HTTP Proxy",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-ISAPI-Ext",
+      "Web-Metabase",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Stat-Compression",
+      "Web-Http-Logging",
+      "Web-Log-Libraries",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Mgmt-Console",
+      "Web-WebServer",
+      "Web-Basic-Auth",
+      "Web-Windows-Auth",
+      "Web-Client-Auth"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Simple-TCPIP",
+    "text":  "Simple TCP/IP Services",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "SMTP-Server",
+    "text":  "SMTP Server",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-ODBC-Logging",
+      "RSAT-SMTP",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "SNMP-Service",
+    "text":  "SNMP Service",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "SNMP-WMI-Provider"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "SNMP-WMI-Provider",
+    "text":  "SNMP WMI Provider",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "SNMP-Service",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Subsystem-UNIX-Apps",
+    "text":  "Subsystem for UNIX-based Applications [Deprecated]",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Telnet-Client",
+    "text":  "Telnet Client",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Telnet-Server",
+    "text":  "Telnet Server",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "TFTP-Client",
+    "text":  "TFTP Client",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "User-Interfaces-Infra",
+    "text":  "User Interfaces and Infrastructure",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "Server-Gui-Mgmt-Infra",
+      "Desktop-Experience",
+      "Server-Gui-Shell"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Server-Gui-Mgmt-Infra",
+    "text":  "Graphical Management Tools and Infrastructure",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "PowerShell",
+      "WoW64-Support"
+    ],
+    "parent":  "User-Interfaces-Infra",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Desktop-Experience",
+    "text":  "Desktop Experience",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "InkAndHandwritingServices",
+      "Server-Gui-Shell",
+      "Server-Media-Foundation"
+    ],
+    "parent":  "User-Interfaces-Infra",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Server-Gui-Shell",
+    "text":  "Server Graphical Shell",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core",
+      "PowerShell",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "User-Interfaces-Infra",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Biometric-Framework",
+    "text":  "Windows Biometric Framework",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WFF",
+    "text":  "Windows Feedback Forwarder",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Windows-Identity-Foundation",
+    "text":  "Windows Identity Foundation 3.5",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Windows-Internal-Database",
+    "text":  "Windows Internal Database",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "PowerShellRoot",
+    "text":  "Windows PowerShell",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "PowerShell",
+      "PowerShell-V2",
+      "PowerShell-ISE",
+      "WindowsPowerShellWebAccess"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "PowerShell",
+    "text":  "Windows PowerShell 3.0",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-45-Core"
+    ],
+    "parent":  "PowerShellRoot",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "PowerShell-V2",
+    "text":  "Windows PowerShell 2.0 Engine",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "PowerShell",
+      "NET-Framework-Core"
+    ],
+    "parent":  "PowerShellRoot",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "PowerShell-ISE",
+    "text":  "Windows PowerShell ISE",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "PowerShell",
+      "NET-Framework-45-Core",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent":  "PowerShellRoot",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WindowsPowerShellWebAccess",
+    "text":  "Windows PowerShell Web Access",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "PowerShell",
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Filtering",
+      "Web-Http-Errors",
+      "Web-Http-Redirect",
+      "Web-Asp-Net45"
+    ],
+    "parent":  "PowerShellRoot",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WAS",
+    "text":  "Windows Process Activation Service",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+      "WAS-Process-Model",
+      "WAS-NET-Environment",
+      "WAS-Config-APIs"
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WAS-Process-Model",
+    "text":  "Process Model",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "WAS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WAS-NET-Environment",
+    "text":  ".NET Environment 3.5",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "NET-Framework-Core",
+      "NET-Framework-45-ASPNET"
+    ],
+    "parent":  "WAS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WAS-Config-APIs",
+    "text":  "Configuration APIs",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent":  "WAS",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Search-Service",
+    "text":  "Windows Search Service",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Shell"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Windows-Server-Backup",
+    "text":  "Windows Server Backup",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Migration",
+    "text":  "Windows Server Migration Tools",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WindowsStorageManagementService",
+    "text":  "Windows Standards-Based Storage Management",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WSRM",
+    "text":  "Windows System Resource Manager [Deprecated]",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Windows-Internal-Database",
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Windows-TIFF-IFilter",
+    "text":  "Windows TIFF IFilter",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WinRM-IIS-Ext",
+    "text":  "WinRM IIS Extension",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Web-Static-Content",
+      "Web-Default-Doc",
+      "Web-Dir-Browsing",
+      "Web-Http-Errors",
+      "Web-Stat-Compression",
+      "Web-Http-Logging",
+      "Web-Request-Monitor",
+      "Web-Http-Tracing",
+      "Web-Filtering"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WINS",
+    "text":  "WINS Server",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "Wireless-Networking",
+    "text":  "Wireless LAN Service",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "WoW64-Support",
+    "text":  "WoW64 Support",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
+    "li_attr": {},
+    "a_attr": {}
+  },
+  {
+    "id":  "XPS-Viewer",
+    "text":  "XPS Viewer",
+    "FeatureType":  "Feature",
+    "dependsOn":  [
+      "Server-Gui-Mgmt-Infra"
+    ],
+    "parent": "#",
+    "SubFeatures":  [
+
+    ],
+    "icon": false,
+    "state": {
+      "opened": false,
+      "disabled": false,
+      "selected": false
+    },
     "li_attr": {},
     "a_attr": {}
   }

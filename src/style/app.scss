@@ -24,10 +24,16 @@ pre code {
   overflow-x: auto;
   background: rgb(1,36,86);
   box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(255, 255, 255, 1);
-  white-space: inherit;
+  white-space: pre-wrap;
   text-align: left;
 }
 
 .jstree-children {
   font-size: 0.75rem;
+}
+
+.tree-container {
+  max-height: 300px;
+  height: 300px;
+  overflow: auto;
 }

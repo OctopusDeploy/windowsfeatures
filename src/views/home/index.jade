@@ -6,7 +6,8 @@
 
     .column.half
         p.align-left Roles and Features
-        js-tree(tree-config="jsTreeConfig" tree-plugins="checkbox" tree-data="scope" tree-model="rolesAndFeatures" tree-events="check_node:nodeSelected;uncheck_node:nodeDeselected;check_all:allNodesSelected")
+        div.tree-container
+            js-tree(id="rolesAndFeatures" tree-config="jsTreeConfig" tree-plugins="checkbox" tree-data="scope" tree-model="rolesAndFeatures" tree-events="check_node:nodeSelected;uncheck_node:nodeDeselected;check_all:allNodesSelected")
 
 div(ng-show="vm.osSelected() !== undefined")
     hr

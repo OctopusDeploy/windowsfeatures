@@ -27,7 +27,7 @@ module windowsfeatures.services.data {
         }
     }
 
-    var module = angular
+    angular
         .module("windowsfeatures.services.data", ["ngResource"])
         .service("DataService", DataService);
 
