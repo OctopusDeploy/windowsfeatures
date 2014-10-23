@@ -6,7 +6,7 @@ module windowsfeatures.controllers {
     export class HomeController {
         operatingSystems: any[];
         selectedOs: any;
-        rolesAndFeatures: any[] = [];
+        rolesAndFeatures: any[];
         selectedRolesAndFeatures: any[];
         jsTreeConfig: any = {
             "core": {
@@ -61,6 +61,7 @@ module windowsfeatures.controllers {
 
             this.operatingSystems = this.DataService.OperatingSystems();
             this.selectedRolesAndFeatures = [];
+            this.rolesAndFeatures = [];
         }
 
         generateDscScript = () => {
@@ -94,12 +95,22 @@ module windowsfeatures.controllers {
             this.dscScript = this.generateDscScript();
         };
 
+        public osSelected = () => {
+            return this.selectedOs;
+        };
+
         public selectedOsChanged = () => {
             this.selectedRolesAndFeatures = [];
-            this.DataService.RolesAndFeatures(this.selectedOs.name).then( (result) => {
-                this.rolesAndFeatures = result;
-            });
             this.scriptCreated = false;
+
+            if (this.osSelected()) {
+                this.DataService.RolesAndFeatures(this.selectedOs.name).then((result) => {
+                    this.rolesAndFeatures = result;
+                });
+            } else {
+                $("#rolesAndFeatures").empty();
+                this.rolesAndFeatures = [];
+            }
         };
 
         public nodeSelected = (e, data) => {
@@ -119,9 +130,6 @@ module windowsfeatures.controllers {
             }
         };
 
-        public osSelected = () => {
-            return this.selectedOs;
-        };
 
         public scriptGenerated = () => {
             return this.osSelected() ? this.selectedOs.name : "";

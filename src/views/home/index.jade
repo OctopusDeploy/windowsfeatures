@@ -9,7 +9,7 @@
         div.tree-container
             js-tree(id="rolesAndFeatures" tree-config="jsTreeConfig" tree-plugins="checkbox" tree-data="scope" tree-model="rolesAndFeatures" tree-events="check_node:nodeSelected;uncheck_node:nodeDeselected;check_all:allNodesSelected")
 
-div(ng-show="vm.osSelected() !== undefined")
+div(ng-show="vm.osSelected()")
     hr
     .button(ng-click="vm.generateScript()") Generate Script
 
