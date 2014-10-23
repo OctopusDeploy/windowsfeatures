@@ -26,7 +26,7 @@ var destinations = {
     js: "" + outputFolder + "/src",
     libs: "" + outputFolder + "/vendor",
     assets: "" + outputFolder + "/assets",
-    data: "" + outputFolder + "/src/app/data",
+    data: "" + outputFolder + "/public",
     index: "" + outputFolder
 };
 
