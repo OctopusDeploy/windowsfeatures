@@ -19,7 +19,8 @@ var globs = {
     integration: 'src/tests/integration/**/*.js',
     data: 'src/app/data/*.json',
     index: 'src/index.jade',
-    server: 'src/app.js'
+    server: 'src/app.js',
+    config: 'src/*.config'
 };
 
 var destinations = {
@@ -184,7 +185,7 @@ gulp.task('index', function () {
 });
 
 gulp.task('server', function () {
-  return gulp.src(globs.server)
+  return gulp.src([globs.server, globs.config])
     .pipe(gulp.dest(destinations.index));
 });
 
