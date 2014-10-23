@@ -18,7 +18,8 @@ var globs = {
     appWithDefinitions: 'src/**/*.ts',
     integration: 'src/tests/integration/**/*.js',
     data: 'src/app/data/*.json',
-    index: 'src/index.jade'
+    index: 'src/index.jade',
+    server: 'src/app.js'
 };
 
 var destinations = {
@@ -182,6 +183,11 @@ gulp.task('index', function () {
     ).pipe(gulp.dest(destinations.index));
 });
 
+gulp.task('server', function () {
+  return gulp.src(globs.server)
+    .pipe(gulp.dest(destinations.index));
+});
+
 gulp.task('watch', ['build', 'browser-sync'], function () {
     gulp.watch(globs.sass, ['sass']);
     gulp.watch(globs.appWithDefinitions, ['ts-lint', 'ts-compile']);
@@ -202,7 +208,8 @@ gulp.task('build', function () {
     return runSequence(
         'clean',
         ['sass', 'copy-assets', 'copy-data', 'ts-compile', 'templates', 'copy-vendor'],
-        'index'
+        'index',
+        'server'
     );
 });
 
