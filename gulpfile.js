@@ -17,7 +17,7 @@ var globs = {
     app: 'src/app/**/*.ts',
     appWithDefinitions: 'src/**/*.ts',
     integration: 'src/tests/integration/**/*.js',
-    data: 'src/app/**/*.json',
+    data: 'src/app/data/*.json',
     index: 'src/index.jade'
 };
 
@@ -26,7 +26,7 @@ var destinations = {
     js: "" + outputFolder + "/src",
     libs: "" + outputFolder + "/vendor",
     assets: "" + outputFolder + "/assets",
-    /*data: "" + outputFolder + "/data",*/
+    data: "" + outputFolder + "/src/app/data",
     index: "" + outputFolder
 };
 
@@ -167,7 +167,7 @@ gulp.task('copy-assets', function () {
 
 gulp.task('copy-data', function() {
     return gulp.src(globs.data)
-      .pipe(gulp.dest(destinations.js));
+      .pipe(gulp.dest(destinations.data));
 });
 
 gulp.task('index', function () {

@@ -12,7 +12,7 @@ module windowsfeatures.services.data {
         }
 
         RolesAndFeatures(osId: string) {
-            var resource = this.$resource("src/data/:osId.json", {}, {
+            var resource = this.$resource("src/app/data/:osId.json", {}, {
                 query: {method: "GET", params: {osId: "data"}, isArray: true}
             });
 
