@@ -131,7 +131,7 @@ fi
 if [ -e "$DEPLOYMENT_SOURCE/gulpfile.js" ]; then
   eval $NPM_CMD install gulp
   exitWithMessageOnError "installing gulp failed"
-  ./node_modules/.bin/gulp --no-color build --type dist
+  ./node_modules/.bin/gulp --no-color build
   exitWithMessageOnError "gulp failed"
 fi
 
