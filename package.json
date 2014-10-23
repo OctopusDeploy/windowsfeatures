@@ -3,6 +3,7 @@
   "name": "windowsfeatures",
   "version": "1.0.0",
   "homepage": "http://windowsfeatures.com",
+  "main": "app.js",
   "devDependencies": {
     "browser-sync": "^1.3.2",
     "chai": "^1.9.1",
