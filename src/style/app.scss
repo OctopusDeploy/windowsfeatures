@@ -12,6 +12,10 @@
   text-align: right;
 }
 
+.align-center {
+  text-align: center;
+}
+
 pre code {
   font-family: "lucida console", monospace;
   font-size: 0.75em;
@@ -36,4 +40,18 @@ pre code {
   max-height: 300px;
   height: 300px;
   overflow: auto;
+}
+
+footer {
+  position: relative;
+  font-size: 0.65rem;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 25%;
+    padding: 10px 0 0;
+  }
 }

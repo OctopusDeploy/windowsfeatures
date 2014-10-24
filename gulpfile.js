@@ -192,7 +192,7 @@ gulp.task('server', function () {
 gulp.task('watch', ['build', 'browser-sync'], function () {
     gulp.watch(globs.sass, ['sass']);
     gulp.watch(globs.appWithDefinitions, ['ts-lint', 'ts-compile']);
-    gulp.watch(globs.templates, ['templates']);
+    gulp.watch(globs.templates, ['index', 'templates']);
     gulp.watch(globs.index, ['index']);
     gulp.watch(globs.assets, ['copy-assets']);
     gulp.watch(globs.data, ['copy-data']);
