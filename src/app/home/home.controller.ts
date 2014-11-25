@@ -95,6 +95,12 @@ module windowsfeatures.controllers {
             this.dscScript = this.generateDscScript();
         };
 
+        public addRoleOrFeature = (roleOrFeature) => {
+            if (this.selectedRolesAndFeatures.indexOf(roleOrFeature, 0) === -1) {
+                this.selectedRolesAndFeatures.push(roleOrFeature);
+            }
+        };
+
         public osSelected = () => {
             return this.selectedOs;
         };
@@ -107,29 +113,43 @@ module windowsfeatures.controllers {
                 this.DataService.RolesAndFeatures(this.selectedOs.name).then((result) => {
                     this.rolesAndFeatures = result;
                 });
+                $(".tree-container").show();
             } else {
                 $("#rolesAndFeatures").empty();
                 this.rolesAndFeatures = [];
+                $(".tree-container").hide();
             }
         };
 
+        public selectDependencies = (node, instance) => {
+            node.original.dependsOn.forEach( dep => {
+                instance.check_node(dep);
+            });
+        };
+
         public nodeSelected = (e, data) => {
-            this.selectedRolesAndFeatures.push(data.node);
-            if (data.node.original.dependsOn && data.node.original.dependsOn.length > 0) {
-                data.node.original.dependsOn.forEach( (item, index) => {
-                    data.instance.check_node(item);
-                });
-                //data.instance.check_node(data.node.original.dependsOn[0]);
+            if (data.node.parent !== "#") {
+                this.addRoleOrFeature(data.instance.get_node(data.node.parent));
             }
+
+            this.addRoleOrFeature(data.node);
+
+            data.node.children.forEach( item => {
+                var child = data.instance.get_node(item);
+                this.addRoleOrFeature(child);
+
+                this.selectDependencies(child, data.instance);
+            });
+
+            this.selectDependencies(data.node, data.instance);
         };
 
         public nodeDeselected = (e, data) => {
             var index = this.selectedRolesAndFeatures.indexOf(data, 0);
-            if (index !== undefined) {
+            if (index !== -1) {
                 this.selectedRolesAndFeatures.splice(index, 1);
             }
         };
-
 
         public scriptGenerated = () => {
             return this.osSelected() ? this.selectedOs.name : "";
