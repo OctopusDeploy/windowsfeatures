@@ -11,8 +11,8 @@ module windowsfeatures.controllers {
         jsTreeConfig: any = {
             "core": {
                 "themes": {
-                    "theme": "default",
-                    "icons": false,
+                    "name": "default",
+                    "icons": true,
                     "dots": false
                 }
             },
@@ -95,7 +95,7 @@ module windowsfeatures.controllers {
             this.dscScript = this.generateDscScript();
         };
 
-        public addRoleOrFeature = (roleOrFeature) => {
+        private addRoleOrFeature = (roleOrFeature) => {
             if (this.selectedRolesAndFeatures.indexOf(roleOrFeature, 0) === -1) {
                 this.selectedRolesAndFeatures.push(roleOrFeature);
             }
@@ -121,7 +121,7 @@ module windowsfeatures.controllers {
             }
         };
 
-        public selectDependencies = (node, instance) => {
+        private selectDependencies = (node, instance) => {
             node.original.dependsOn.forEach( dep => {
                 instance.check_node(dep);
             });
