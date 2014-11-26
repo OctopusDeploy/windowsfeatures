@@ -22,7 +22,6 @@ module windowsfeatures.controllers {
                 "tie_selection": false
             }
         };
-        data: core.IDataService;
         scriptCreated: boolean;
         dismScriptTemplate: string = "dism /online /enable-feature {features}";
         dismFeatureTemplate: string = "/featurename:{featurename}";
@@ -67,7 +66,7 @@ module windowsfeatures.controllers {
         generateDscScript = () => {
             var script: string = "";
             var template: string = this.dscFeatureTemplate;
-            this.selectedRolesAndFeatures.forEach((item, index) => {
+            this.selectedRolesAndFeatures.forEach( item => {
                 script += template.replace(RegExp("\\{feature\\}", "g"), item.id).replace(RegExp("\\{featurename\\}", "g"), item.id);
             });
             return this.dscScriptTemplate.replace(RegExp("\\{features\\}", "g"), script);
@@ -79,7 +78,7 @@ module windowsfeatures.controllers {
             switch (this.selectedOs.name) {
                 case "Win2008":
                     template = this.dismFeatureTemplate;
-                    this.selectedRolesAndFeatures.forEach((item, index) => {
+                    this.selectedRolesAndFeatures.forEach( item  => {
                         script += template.replace(RegExp("\\{featurename\\}", "g"), item.id);
                         script += " ";
                     });
