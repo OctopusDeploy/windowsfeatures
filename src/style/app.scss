@@ -3,6 +3,15 @@
 @import "normalize";
 @import "grid";
 
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
 section {
   padding: 1rem 0;
 }

@@ -8,13 +8,13 @@ html(ng-app="windowsfeatures" ng-controller="HomeController as vm")
     <!-- endinject -->
 
     body
-        include ./views/shared/header.jade
+      include ./views/shared/header.jade
 
-        section
-            .container
-                div(ng-view)
+      section(ng-cloak="")
+          .container
+              div(ng-view)
 
-        include ./views/shared/footer.jade
+      include ./views/shared/footer.jade
 
     <!-- inject:js -->
     <!-- endinject -->
