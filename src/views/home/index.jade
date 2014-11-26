@@ -19,18 +19,15 @@ div(ng-show="vm.scriptCreated")
         .row.clearfix(ng-show="vm.scriptGenerated() === 'Win2008'")
             .container
                 p Deployment Image Servicing and Management (DISM)
-                pre
-                    code {{vm.dismScript}}
+                textarea {{vm.dismScript}}
 
 
         .row.clearfix(ng-show="vm.scriptGenerated() === 'Win2012'")
             .container
                 p PowerShell Server Manager Cmdlet
-                pre
-                    code {{vm.cmdletScript}}
+                textarea {{vm.cmdletScript}}
 
         .row.clearfix(ng-hide="vm.scriptGenerated() === ''")
             .container
                 p PowerShell Desired State Configuration (DSC)
-                pre
-                    code {{vm.dscScript}}
+                textarea {{vm.dscScript}}
